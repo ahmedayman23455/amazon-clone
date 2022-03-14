@@ -42,7 +42,7 @@ function Header() {
 
         {/* Right */}
         <div className={classes.right}>
-          <div onClick={signIn}>
+          <div onClick={session? signOut : signIn}> 
             <p>{session?  `Hello, ${session.user.name}`: 'signin'}</p>
             <p>Accounts&Lists</p>
           </div>
