@@ -1,0 +1,55 @@
+@use "../../styles/abstracts" as *;
+@use "../../styles/mixins" as *;
+
+.signinWrapper {
+  padding-inline: 1em;
+
+  .signinSection {
+    background-color: white;
+    max-width: 80ch;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include shadow-md;
+    padding: 2em;
+    @include flow-vertical(1.5em);
+  }
+
+  .image {
+    img {
+      width: clamp(12rem, 18vw, 18rem);
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+
+  button {
+    img {
+      width: 2rem;
+    }
+    display: flex;
+    align-items: center;
+    @include flow-horizontal(0.5rem);
+    @include breakpoint(md) {
+      @include flow-horizontal(1.5rem);
+    }
+    background: none;
+    background-color: hsl(217, 89%, 61%);
+    color: white;
+    border: none;
+    padding: 0.2em 1em;
+    @include rounded-sm;
+    cursor: pointer;
+    span:first-of-type {
+      @include rounded-full;
+      background-color: white;
+      padding: 0.2em;
+      img {
+        width: 2rem;
+        @include rounded-full;
+      }
+    }
+  }
+}

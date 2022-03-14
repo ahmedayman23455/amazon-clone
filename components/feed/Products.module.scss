@@ -1,0 +1,33 @@
+@use "../../styles/abstracts" as *;
+@use "../../styles/mixins" as *;
+
+.products {
+  padding-inline: 1em;
+  @include breakpoint-down(md) {
+    @include flow-vertical;
+  }
+  transform: translateY(-10vw);
+  position: relative;
+  z-index: 100;
+  grid-auto-flow: row dense;
+
+  @include breakpoint(md) {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(lg) {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoint(xl) {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.cover {
+  grid-column: 1 / -1;
+}

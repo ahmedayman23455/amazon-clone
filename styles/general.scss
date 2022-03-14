@@ -1,0 +1,18 @@
+@use "./abstracts" as *;
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.container {  
+   max-width: 1536px;  
+   margin: auto; 
+}
+
+.notifications { 
+   background-color: red;  
+   position:  fixed; 
+   top:.5rem ; 
+   right: 1rem ;  
+   max-width: 50ch;  
+   z-index: 1000;  
+   @include flow-vertical(.5rem)
+}

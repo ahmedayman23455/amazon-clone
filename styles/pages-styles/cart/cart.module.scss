@@ -1,0 +1,16 @@
+@use "../../abstracts" as *;
+@use "../../mixins" as *;
+
+.cart {  
+   padding: 1em; 
+   gap: 1em;
+   display:  flex;  
+   flex-direction: column;
+   @include breakpoint(lg) {  
+      flex-direction: row;
+   }
+
+
+   // @include flow-horizontal
+
+}
